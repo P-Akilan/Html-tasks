@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        height: 308px;
+        width: 308px;
+        background-color: black;
+        border-radius: 150px;
+      }
+      .point {
+        height: 30px;
+        width: 30px;
+        background-color: black;
+        border: 2px solid red;
+        border-radius: 50px;
+        position: absolute;
+        top: 146px;
+        left: 145px;
+      }
+      #line1 {
+        height: 80px;
+        width: 5px;
+        border: 2px solid rgb(248, 247, 247);
+        border-radius: 30px;
+        position: absolute;
+        top: 81px;
+        left: 157.5px;
+        transform-origin: bottom;
+      }
+      #line2 {
+        height: 100px;
+        width: 3px;
+        border: 2px solid red;
+        border-radius: 30px;
+        position: absolute;
+        top: 61px;
+        left: 158px;
+        transform-origin: bottom;
+      }
+      #line3 {
+        height: 100px;
+        width: 0px;
+        border: 2px solid rgb(0, 217, 255);
+        border-radius: 30px;
+        position: absolute;
+        top: 61px;
+        left: 158px;
+        transform-origin: bottom;
+      }
+
+      .No-1 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 25px;
+        left: 225px;
+      }
+      .No-2 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 70px;
+        left: 270px;
+      }
+      .No-3 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 134px;
+        left: 291px;
+      }
+      .No-4 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 190px;
+        left: 270px;
+      }
+      .No-5 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 245px;
+        left: 225px;
+      }
+      .No-6 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 270px;
+        left: 150px;
+      }
+      .No-7 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 245px;
+        left: 70px;
+      }
+      .No-8 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 190px;
+        left: 25px;
+      }
+      .No-9 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 134px;
+        left: 13px;
+      }
+      .No-10 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 70px;
+        left: 25px;
+      }
+      .No-11 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 25px;
+        left: 70px;
+      }
+      .No-12 {
+        color: rgb(255, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 0px;
+        left: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
+      <div class="point"></div>
+      <span class="No-1">1</span>
+      <span class="No-2">2</span>
+      <span class="No-3">3</span>
+      <span class="No-4">4</span>
+      <span class="No-5">5</span>
+      <span class="No-6">6</span>
+      <span class="No-7">7</span>
+      <span class="No-8">8</span>
+      <span class="No-9">9</span>
+      <span class="No-10">10</span>
+      <span class="No-11">11</span>
+      <span class="No-12">12</span>
+    </div>
+    <script>
+      
+      setInterval(() => {
+        d = new Date();
+        hr = d.getHours();
+        min = d.getMinutes();
+        sec = d.getSeconds();
+        hr_rotation = 30 * hr + min / 2;
+        min_rotation = 6 * min;
+        sec_rotation = 6 * sec;
+
+        line1.style.transform = `rotate(${hr_rotation}deg)`;
+        line2.style.transform = `rotate(${min_rotation}deg)`;
+        line3.style.transform = `rotate(${sec_rotation}deg)`;
+      }, 1000);
+    </script>
+  </body>
+</html>
